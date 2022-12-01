@@ -12,11 +12,11 @@ install_requires = [
 ]
 
 setup(name="opcua",
-      version="0.98.13",
+      version="0.98.70",
       description="Pure Python OPC-UA client and server library",
       author="Olivier Roulet-Dubonnet",
       author_email="olivier.roulet@gmail.com",
-      url='http://freeopcua.github.io/',
+      url='https://github.com/rfcomunica/python-opcua-siemens',
       packages=find_packages(),
       provides=["opcua"],
       license="GNU Lesser General Public License v3 or later",
