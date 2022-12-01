@@ -316,7 +316,11 @@ def nodeid_to_binary(nodeid):
         data = struct.pack("<BH", nodeid.NodeIdType.value, nodeid.NamespaceIndex) + \
                Primitives.Guid.pack(nodeid.Identifier)
     else:
-        raise UaError("Unknown NodeIdType: {} for NodeId: {}".format(nodeid.NodeIdType, nodeid))
+        print("----------------dati-----------------")
+        data = struct.pack("<BH", 3, 2) + \
+            Primitives.String.pack(nodeid.Identifier)
+        print(data)
+        #raise UaError("Unknown NodeIdType: {} for NodeId: {}".format(nodeid.NodeIdType, nodeid))
     # Add NamespaceUri and ServerIndex in case we have an ExpandedNodeId
     if nodeid.NamespaceUri:
         data = bytearray(data)
